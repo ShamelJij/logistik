@@ -20,7 +20,8 @@
     <div class="container text-center">
         <h1 class="p-3">Logistik LKW</h1>
         <form>
-            <div class="form-group">
+            <select name="selectLKW" id="lkw" class="custom-select w-25"></select>
+            <div class="form-group p-3">
                 <input class="form-check-input" type="checkbox" id="beladen" onclick="info()">
                 <label class="form-check-label" for="beladen">beladen?</label>
             </div>
@@ -41,9 +42,8 @@
                 </div>
             </div>
         </form>
-        <div class="row p-3">
-            <div class="col-md"><p id="info1"></p></div>
-            <!-- <div class="col-md"><p id="info2"></p></div> -->
+        <hr class="hrauto">
+        <div class="row p-3" id="info">
         </div>
         
     </div>
