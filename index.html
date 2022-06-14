@@ -17,11 +17,11 @@
     <title>logistik</title>
   </head>
   <body>
-    <div class="container text-center">
+    <div class="container text-center p-3">
         <h1 class="p-3">Logistik LKW</h1>
-        <form>
-            <select name="selectLKW" id="lkw" class="custom-select w-25"></select>
-            <div class="form-group p-3">
+        <form class="p-3">
+            <select name="selectLKW" id="lkw" class="custom-select w-25 m-3"></select>
+            <div class="form-group p-3 text-white bg-success w-30 col-md-4 offset-md-4">
                 <input class="form-check-input" type="checkbox" id="beladen" onclick="info()">
                 <label class="form-check-label" for="beladen">beladen?</label>
             </div>
@@ -29,21 +29,20 @@
                 <div class="col">
                     <div class="form-group">
                         <label for="strecke">Strecke rechnen</label>
-                        <input type="number" id="strecke" class="form-control">
+                        <input type="number" id="strecke" class="form-control w-30 col-md-4 offset-md-4">
                     </div>
                     <button type="button" onclick="fahren()" class="btn btn-success">km fahren!</button>
                 </div>
                 <div class="col">
                     <div class="form-group">
                         <label for="liter">Tanken rechnen</label>
-                        <input type="number" id="liter" class="form-control">
+                        <input type="number" id="liter" class="form-control w-30 col-md-4 offset-md-4">
                     </div>
                     <button type="button" onclick="tanken()" class="btn btn-success">Liter tanken!</button>
                 </div>
             </div>
         </form>
-        <hr class="hrauto">
-        <div class="row p-3" id="info">
+        <div class="row p-3 border bg-info" id="info">
         </div>
         
     </div>

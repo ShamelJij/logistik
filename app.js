@@ -47,11 +47,23 @@ lkw.push(new LKW("LKW1", 30, 50, 1000));
 lkw.push(new LKW("LKW2", 25, 40, 2500));
 lkw.push(new LKW("LKW3", 35, 65, 1200));
 lkw.push(new LKW("LKW4", 45, 75, 1600));
+lkw.push(new LKW("LKW5", 30, 50, 1000));
+lkw.push(new LKW("LKW6", 25, 40, 2500));
+lkw.push(new LKW("LKW7", 35, 65, 1200));
+lkw.push(new LKW("LKW8", 45, 75, 1600));
+lkw.push(new LKW("LKW9", 30, 50, 1000));
+lkw.push(new LKW("LKW10", 25, 40, 2500));
+lkw.push(new LKW("LKW11", 35, 65, 1200));
+lkw.push(new LKW("LKW12", 45, 75, 1600));
+lkw.push(new LKW("LKW13", 30, 50, 1000));
+lkw.push(new LKW("LKW14", 25, 40, 2500));
+lkw.push(new LKW("LKW15", 35, 65, 1200));
+lkw.push(new LKW("LKW16", 45, 75, 1600));
 info();
 function info(){
     document.getElementById("info").innerHTML = "";
     for(let i = 0; i < lkw.length; i++){
-        document.getElementById("info").innerHTML += "<div class='col-md'><b class='text-warning'>" + lkw[i].name + "</b><hr class='hrauto'>" 
+        document.getElementById("info").innerHTML += "<div class='col-md p-3 border bg-light'><b class='bg-warning p-1'>" + lkw[i].name + "</b><hr class='hrauto'>" 
         + "<br>Kilometerstand: " + lkw[i].kilometer.toFixed(1) + 
         " km <br>Tankinhalt: " + lkw[i].restTank.toFixed(1) + " ℓ/" + lkw[i].tank + 
         " ℓ <br> Reichweite: " + (lkw[i].reichweite(document.getElementById("beladen").checked).toFixed(1)) + " km </div><br>"; 
