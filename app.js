@@ -8,7 +8,23 @@ class LKW {
         this.tank = t; //gesamt
         this.restTank = t; //rest
     }
+    fahren (k){
+        k = Math.min(k, (this.restTank/this.verbrauch*100 - 0.05).toFixed(1));
+        this.kilometer += k;
+        this.restTank -= (k/100) * this.verbrauch ;
+    }
+    tanken(l){
+        l = Math.min(l, (this.tank - this.restTank)); 
+        this.restTank += l;
+    }
 }
 
 let lkw1 = new LKW("LKW1", 30, 1000);
-document.getElementById("info").innerHTML = "<b class='text-success'>" + lkw1.name + "</b>" + "<br>" + lkw1.kilometer + " km <br>" + lkw1.restTank + " ℓ/" + lkw1.tank + " ℓ <br> Reichweite: " + (lkw1.restTank/lkw1.verbrauch * 100) + " km"; 
+lkw1.fahren(2000);
+lkw1.tanken(400);
+lkw1.fahren(2000);
+document.getElementById("info").innerHTML = "<b class='text-success'>" + lkw1.name + "</b>" 
++ "<br>Kilometerstand: " + lkw1.kilometer + 
+" km <br>Tankinhalt: " + lkw1.restTank.toFixed(1) + " ℓ/" + lkw1.tank + 
+" ℓ <br> Reichweite: " + (lkw1.restTank/lkw1.verbrauch * 100).toFixed(1) + " km"; 
+
