@@ -4,6 +4,12 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- custom CSS -->
+    <style> .hrauto {
+        width: auto;
+        margin: 1rem 1rem;
+    }</style>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -12,9 +18,34 @@
   </head>
   <body>
     <div class="container text-center">
-        <h1>Logistik LKW</h1>
-        <hr>
-        <p id="info"></p>
+        <h1 class="p-3">Logistik LKW</h1>
+        <form>
+            <div class="form-group">
+                <input class="form-check-input" type="checkbox" id="beladen" onclick="info()">
+                <label class="form-check-label" for="beladen">beladen?</label>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="strecke">Strecke rechnen</label>
+                        <input type="number" id="strecke" class="form-control">
+                    </div>
+                    <button type="button" onclick="fahren()" class="btn btn-success">km fahren!</button>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="liter">Tanken rechnen</label>
+                        <input type="number" id="liter" class="form-control">
+                    </div>
+                    <button type="button" onclick="tanken()" class="btn btn-success">Liter tanken!</button>
+                </div>
+            </div>
+        </form>
+        <div class="row p-3">
+            <div class="col-md"><p id="info1"></p></div>
+            <!-- <div class="col-md"><p id="info2"></p></div> -->
+        </div>
+        
     </div>
     
     <!-- JavaScript files -->
